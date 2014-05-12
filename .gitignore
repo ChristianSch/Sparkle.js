@@ -1,1 +1,4 @@
 node_modules
+log
+sparkle.log
+*.db
