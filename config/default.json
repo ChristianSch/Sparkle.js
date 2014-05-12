@@ -1,0 +1,7 @@
+{
+	"Appcast" : {
+		/* be careful here, since *every* existing file
+		gets shown to the user! */
+		"path" : "Sample Appcast.xml" 
+	}
+}
