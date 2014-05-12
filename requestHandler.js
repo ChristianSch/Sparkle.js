@@ -10,6 +10,7 @@ function handleRequest(request) {
 
 	if (config.stdout != 1) {
 		// log to database
+		console.log("Not implemented yet!");
 
 	} else {
 		// log to stdout
