@@ -1,4 +1,5 @@
 var url = require('url'); // parse GET arguments
+var config = require('config').Logging; // configuration
 
 function handleRequest(request) {
 	var parsedURL = url.parse(request.url, true); // true: get query as object

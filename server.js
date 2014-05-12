@@ -1,6 +1,7 @@
 var http = require("http");
 var fs = require('fs'); // file handling
 var config = require('config').Appcast; // configuration
+var config = require('config').Logging; // log configuration
 
 function start(handler) {
 	function onRequest(request, response) {
@@ -15,7 +16,7 @@ function start(handler) {
   			response.writeHead(200, {"Content-Type": "text/xml"});
   			response.write(data);
   		}
-  		
+
 		response.end();
   	});
   }
