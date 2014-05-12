@@ -18,7 +18,7 @@ First, make sure the path to your desired appcast.xml is correct.
 WARNING: **Every** possible file that you set here will be deployed. That means, if you put `/usr/passwd` in there, Sparkle.js will show it to everyone that navigates to your server (if it is readable of course).
 
 ### Logging the system stats
-Either you want to use SQLlite (not implemented yet) or every set of information (say request) gets logged to stdin.
+Either you want to use SQLite (not implemented yet) or every set of information (say request) gets logged to stdin.
 
 Thus, you could just send the output to a file:
 
