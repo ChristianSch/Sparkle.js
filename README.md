@@ -66,5 +66,4 @@ node index.js
 ## Dependencies
 Right now, `Sparkle.js` depends on the following `node.js` modules:
 
-* [Moment.js](http://momentjs.com)
 * [Node-config](http://lorenwest.github.com/node-config/)
