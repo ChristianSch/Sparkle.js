@@ -2,6 +2,7 @@
 	"name" : "Sparkle.js",
 	"version" : "0.0.1",
 	"dependencies" : {
-		"config" : "0.4.35"
+		"config" : "0.4.35",
+		"sqlite3" : "2.2.3"
 	}
 }

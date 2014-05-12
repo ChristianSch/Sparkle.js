@@ -67,3 +67,4 @@ node index.js
 Right now, `Sparkle.js` depends on the following `node.js` modules:
 
 * [Node-config](http://lorenwest.github.com/node-config/)
+* [Node-SQLite3](https://github.com/mapbox/node-sqlite3)
