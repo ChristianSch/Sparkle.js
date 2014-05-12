@@ -23,7 +23,7 @@ Sparkle.js knows two ways of saving the given sets of information.
 * [stdout](#stdout)
 
 #### SQLite
-TO use SQLite for logging set `0` to the key `stdout` to the key `stdout` in the section `Logging` in the config-file.
+To use SQLite for logging set `0` to the key `stdout` to the key `stdout` in the section `Logging` in the config-file.
 
 ```
 "Logging" : {
