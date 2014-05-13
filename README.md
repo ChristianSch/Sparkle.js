@@ -4,6 +4,8 @@ Sparkle.js
 Node.js backend for sparkle system informations
 
 ## Setup
+First grab a copy of the most recent code: [here](https://github.com/ChristianSch/Sparkle.js/archive/master.zip) and unzip it.
+
 ### Install dependencies
 Install all [dependencies](#dependencies) with `npm`:
 
@@ -15,6 +17,8 @@ npm install
 Configure the `config/default.json` file to your needs. First, make sure the path to your desired appcast.xml is correct.
 
 WARNING: **Every** possible file that you set here will be deployed. That means, if you put `/usr/passwd` in there, Sparkle.js will show it to everyone that navigates to your server (if it is readable of course).
+
+Then you can easily remove the `Sample Appcast.xml` from the directory.
 
 ### Logging the system stats
 Sparkle.js knows two ways of saving the given sets of information.
