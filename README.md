@@ -22,15 +22,16 @@ Sparkle.js knows two ways of saving the given sets of information.
 * [SQLite](#sqlite)
 * [stdout](#stdout)
 
-#### SQLite
-To use SQLite for logging set `0` to the key `stdout` to the key `stdout` in the section `Logging` in the config-file.
+#### MongoDB
+To use SQLite for logging set `0` to the key `stdout` to the key `stdout` in the section `Logging` in the config-file. Then set the proper `host` in the config section `Database`.
 
 ```
 "Logging" : {
 	"stdout" : "0"
 }
 ```
-TODO
+
+If it was not possible to add the record it will be logged to stdout.
 
 #### stdout
 If you want to use `stdout` for logging, set `1` to the key `stdout` in the section `Logging` in the config-file.
@@ -49,12 +50,12 @@ Every requests looks like this.
 ```
 {
 	"timestamp" : "1399930754601",
-	"parameter" : "{"OSX":"10.10"}"
+	"parameters" : "{"OSX":"10.10"}"
 }
 ```
 
 * `timestamp` is the servers timestamp at the moment of receiving the request.
-* `parameter` hols the GET parameters encoded in JSON.
+* `parameters` holds the GET parameters encoded in JSON.
 
 ### Starting
 When you're ready to go, just start node like this (in the Sparkle.js directory):
