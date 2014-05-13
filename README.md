@@ -19,11 +19,11 @@ WARNING: **Every** possible file that you set here will be deployed. That means,
 ### Logging the system stats
 Sparkle.js knows two ways of saving the given sets of information.
 
-* [SQLite](#sqlite)
+* [MongoDB](#mongodb)
 * [stdout](#stdout)
 
 #### MongoDB
-To use SQLite for logging set `0` to the key `stdout` to the key `stdout` in the section `Logging` in the config-file. Then set the proper `host` in the config section `Database`.
+To use MongoDB for logging set `0` to the key `stdout` to the key `stdout` in the section `Logging` in the config-file. Then set the proper `host` in the config section `Database`.
 
 ```
 "Logging" : {
@@ -31,10 +31,17 @@ To use SQLite for logging set `0` to the key `stdout` to the key `stdout` in the
 }
 ```
 
-If it was not possible to add the record it will be logged to stdout.
+You'd want to change the database host to use either:
+```
+"Database" : {
+	"host" : "localhost:27017"
+}
+```
+
+Note: If there was an error while inserting a record into the database, the record will be logged to stdout as fallback.
 
 #### stdout
-If you want to use `stdout` for logging, set `1` to the key `stdout` in the section `Logging` in the config-file.
+If you want to use `stdout` for logging as default, set `1` to the key `stdout` in the section `Logging` in the config-file.
 ```
 "Logging" : {
 	"stdout" : "1"
@@ -46,11 +53,12 @@ This way, you could send all the output to a logfile:
 > node index.js >> sparkle-js.log
 ```
 
-Every requests looks like this.
+Every record looks like this:
 ```
 {
 	"timestamp" : "1399930754601",
-	"parameters" : "{"OSX":"10.10"}"
+	"ip" : "…"
+	"parameters" : "{… JSON returned from parsing GET parameters …}",
 }
 ```
 
@@ -68,4 +76,4 @@ node index.js
 Right now, `Sparkle.js` depends on the following `node.js` modules:
 
 * [Node-config](http://lorenwest.github.com/node-config/)
-* [Node-SQLite3](https://github.com/mapbox/node-sqlite3)
+* [MongoDB Node.JS Driver](https://github.com/mongodb/node-mongodb-native)
