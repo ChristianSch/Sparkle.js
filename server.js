@@ -3,6 +3,7 @@ var fs = require('fs'); // file handling
 var appcastConfig = require('config').Appcast; // configuration
 var logConfig = require('config').Logging; // log configuration
 
+/* TODO: config should be given as arguments */
 function start(handler) {
     function onRequest(request, response) {
         handler(request); // handle request: save to database etc.
