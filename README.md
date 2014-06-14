@@ -35,7 +35,7 @@ To use MongoDB for logging set `0` to the key `stdout` to the key `stdout` in th
 }
 ```
 
-You'd want to change the database host to use either:
+You'd want to change the database host too:
 ```
 "Database" : {
 	"host" : "localhost:27017"
