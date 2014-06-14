@@ -6,7 +6,7 @@ var dbConfig = require('config').Database; // database configuration
  * Write JSON string to stdout
  * @param  {[String]} json JSON string to print to stdout
  */
- function logToStdout(json) {
+function logToStdout(json) {
     if (json) {
         console.log(json);
     }
@@ -17,10 +17,10 @@ var dbConfig = require('config').Database; // database configuration
  *
  * @discussion If there was an error using the database the output will be logged to
  * stdout as fallback.
- * 
+ *
  * @param  {[String]} json JSON string to log
  */
- function logToMongoDB(json) {
+function logToMongoDB(json) {
     var MongoClient = require('mongodb').MongoClient;
 
     /* connect to db and insert record */
@@ -48,15 +48,13 @@ var dbConfig = require('config').Database; // database configuration
  * @discussion The GET parameters *should be* given by the sparkle
  * framework making the request. These key value pairs get saved to
  * either stdout or a mongodb with stdout as fallback.
- * 
+ *
  * @param  {[Object]} request HTTP request
  */
- function handleRequest(request) {
+function handleRequest(request) {
     var parsedURL = url.parse(request.url, true); // true: get query as object
 
-    var json = "{\"timestamp\":" + Date.now() + ","
-    + "\"parameters\":" + JSON.stringify(parsedURL.query) + ","
-    + "\"ip\":\"" + request.connection.remoteAddress + "\"}";
+    var json = "{\"timestamp\":" + Date.now() + "," + "\"parameters\":" + JSON.stringify(parsedURL.query) + "," + "\"ip\":\"" + request.connection.remoteAddress + "\"}";
 
     if (config.stdout != 1) {
         logToMongoDB(json);
