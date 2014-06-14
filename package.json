@@ -12,6 +12,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-jsbeautifier": "^0.2.7",
     "mocha": "^1.20.1",
-    "mocha-jshint": "0.0.7"
+    "mocha-jshint": "0.0.7",
+    "xmldom": "^0.1.19"
   }
 }
